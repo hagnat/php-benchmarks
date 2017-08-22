@@ -30,12 +30,12 @@ class Benchmark
             }
 
             $duration = microtime(true) - $start;
-            $this->log(sprintf("Test #%s Duration: %.2f sec", $testNumber, $duration));
+            $this->log(sprintf("Test #%s Duration: %.2f ms", $testNumber, $duration * 10000));
             $totalTime += $duration;
         }
 
         print "\n";
-        $this->log(sprintf("Avg. '%s' test duration: %.2f sec", $title, $totalTime / $this->numberOfTests));
+        $this->log(sprintf("Avg. '%s' test duration: %.2f ms", $title, 10000 * $totalTime / $this->numberOfTests));
         print "\n";
     }
 
