@@ -1,0 +1,10 @@
+{
+    "name": "hagnat/php-benchmarks",
+    "authors": [
+        {
+            "name": "Valdir Bruxel Junior",
+            "email": "hagnat@gmail.com"
+        }
+    ],
+    "require": {}
+}
