@@ -8,7 +8,7 @@ use Benchmarks\Benchmark;
 
 // compares if there is a difference between the usage of (int) and intval()
 
-$benchmark = new Benchmark(5, 10e6);
+$benchmark = new Benchmark(5, 1000);
 
 // tests executed on a
 //
@@ -22,32 +22,32 @@ $benchmark->test('(int)', function() {
     $v = (int) 10;
 });
 
-// [2017-08-22 09:06:51.997279] Benchmarking '(int)' with 10000000 iterations
-// [2017-08-22 09:06:51.997325] Test #1 of 5
-// [2017-08-22 09:06:53.023332] Test #1 Duration: 1.03 sec
-// [2017-08-22 09:06:53.023363] Test #2 of 5
-// [2017-08-22 09:06:54.039776] Test #2 Duration: 1.02 sec
-// [2017-08-22 09:06:54.039801] Test #3 of 5
-// [2017-08-22 09:06:55.072749] Test #3 Duration: 1.03 sec
-// [2017-08-22 09:06:55.072775] Test #4 of 5
-// [2017-08-22 09:06:56.072512] Test #4 Duration: 1.00 sec
-// [2017-08-22 09:06:56.072537] Test #5 of 5
-// [2017-08-22 09:06:57.103015] Test #5 Duration: 1.03 sec
-// [2017-08-22 09:06:57.103048] Avg. '(int)' test duration: 1.02 sec
+//     [2017-08-22 09:52:03.686052] Benchmarking '(int)' with 1000 iterations
+//     [2017-08-22 09:52:03.686098] Test #1 of 5
+//     [2017-08-22 09:52:03.686262] Test #1 Duration: 1.32 ms
+//     [2017-08-22 09:52:03.686286] Test #2 of 5
+//     [2017-08-22 09:52:03.686429] Test #2 Duration: 1.33 ms
+//     [2017-08-22 09:52:03.686439] Test #3 of 5
+//     [2017-08-22 09:52:03.686565] Test #3 Duration: 1.19 ms
+//     [2017-08-22 09:52:03.686574] Test #4 of 5
+//     [2017-08-22 09:52:03.686700] Test #4 Duration: 1.18 ms
+//     [2017-08-22 09:52:03.686708] Test #5 of 5
+//     [2017-08-22 09:52:03.686834] Test #5 Duration: 1.18 ms
+//     [2017-08-22 09:52:03.686846] Avg. '(int)' test duration: 1.24 ms
 
 $benchmark->test('intval()', function() {
     $v = intval(10);
 });
 
-// [2017-08-22 09:06:57.103058] Benchmarking 'intval()' with 10000000 iterations
-// [2017-08-22 09:06:57.103065] Test #1 of 5
-// [2017-08-22 09:06:58.294053] Test #1 Duration: 1.19 sec
-// [2017-08-22 09:06:58.294080] Test #2 of 5
-// [2017-08-22 09:06:59.480390] Test #2 Duration: 1.19 sec
-// [2017-08-22 09:06:59.480416] Test #3 of 5
-// [2017-08-22 09:07:00.663458] Test #3 Duration: 1.18 sec
-// [2017-08-22 09:07:00.663484] Test #4 of 5
-// [2017-08-22 09:07:01.892593] Test #4 Duration: 1.23 sec
-// [2017-08-22 09:07:01.892620] Test #5 of 5
-// [2017-08-22 09:07:03.090555] Test #5 Duration: 1.20 sec
-// [2017-08-22 09:07:03.090578] Avg. 'intval()' test duration: 1.20 sec
+//     [2017-08-22 09:52:03.686857] Benchmarking 'intval()' with 1000 iterations
+//     [2017-08-22 09:52:03.686866] Test #1 of 5
+//     [2017-08-22 09:52:03.687076] Test #1 Duration: 1.97 ms
+//     [2017-08-22 09:52:03.687095] Test #2 of 5
+//     [2017-08-22 09:52:03.687249] Test #2 Duration: 1.45 ms
+//     [2017-08-22 09:52:03.687259] Test #3 of 5
+//     [2017-08-22 09:52:03.687417] Test #3 Duration: 1.49 ms
+//     [2017-08-22 09:52:03.687427] Test #4 of 5
+//     [2017-08-22 09:52:03.687590] Test #4 Duration: 1.14 ms
+//     [2017-08-22 09:52:03.687601] Test #5 of 5
+//     [2017-08-22 09:52:03.687718] Test #5 Duration: 1.12 ms
+//     [2017-08-22 09:52:03.687723] Avg. 'intval()' test duration: 1.43 ms
